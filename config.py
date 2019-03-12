@@ -7,8 +7,9 @@ class Config(object):
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'hard to guess string'
     # 每次请求结束后，自动提交数据库中的变动
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
+    SQLALCHEMY_TRACK_MODIFICATIONS =False
     # 管理员邮箱
-    NICEBLOG_ADMIN = 'shehuan320@163.com'
+    NICEBLOG_ADMIN = '18201163909@163.com'
 
     PER_PAGE_10 = 10
     PER_PAGE_5 = 5
@@ -17,12 +18,12 @@ class Config(object):
     MAIL_USE_SSL = True
     MAIL_USE_TLS = False
     # 发送验证的邮箱信息
-    MAIL_USERNAME = '544642279@qq.com'
-    MAIL_PASSWORD = '授权登录密码'
-    MAIL_SERVER = 'smtp.qq.com'
+    MAIL_USERNAME = '18201163909@163.com'
+    MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
+    MAIL_SERVER = 'smtp.163.com'
     MAIL_PORT = 465
     # 发件人
-    NICEBLOG_MAIL_SENDER = 'NiceBlog<544642279@qq.com>'
+    NICEBLOG_MAIL_SENDER = 'NiceBlog<18201163909@163.com>'
     # 邮件主题前缀
     NICEBLOG_MAIL_SUBJECT_PREFIX = '[NiceBlog]'
 

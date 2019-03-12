@@ -1,0 +1,3 @@
+set SECRET_KEY=TEST123456********
+set FLASK_CONFIG=testing
+REM set MAIL_PASSWORD=xxxx2018xxxx

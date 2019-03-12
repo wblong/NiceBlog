@@ -15,3 +15,15 @@
 * 评论管理（删除、屏蔽）
 
 **3、** 为移动端提供相关api接口
+
+## env 
+
+   python 环境： python3.7.1
+
+**1、** 运行
+```
+pip install -r requirements.txt
+env.bat
+python manage.py runserver
+
+```
