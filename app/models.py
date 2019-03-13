@@ -232,6 +232,7 @@ class Role(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(64), unique=True)
     default = db.Column(db.Boolean(), default=False, index=True)
+    permissions=db.Column(db.Integer)
     # 与当前角色相关联的用户组成的列表
     # 'User'：当前Model关联的另一个Model
     # backref='role'：给User添加一个role属性，定义反向关系
@@ -247,8 +248,8 @@ class Role(db.Model):
     def inset_roles():
         # 定义角色dict
         roles = {
-            'User',
-            'Administrator'
+            'User':[Permission.FAVOURITE,Permission.COMMENT,Permission.WRITE],
+            'Administrator':[Permission.FAVOURITE,Permission.COMMENT,Permission.WRITE,Permission.ADMIN]
         }
         default_role = 'User'
         for r in roles:
